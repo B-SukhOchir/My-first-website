@@ -1,0 +1,617 @@
+
+/* reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* үндсэн сайтууд */
+html, body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+}
+.b-color{
+    color: #333;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+h1,h2,h3{
+    padding-bottom: 20px;
+}
+p{
+    margin: 10px 0;
+}
+.container{
+    max-width: 1120px;
+    margin: auto;
+    overflow: auto;
+    padding: 0 20px;
+}
+.text-primary{
+    color: #f7c08a;
+}
+.lead{
+    font-size: 20px;
+}
+.font-style{
+    text-transform: uppercase;
+}
+.btn{
+    /* margin болон padding өгөхийн тулд display:inline-block болгочихьё */
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    background-color: #333;
+    padding: 13px 20px;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #f7c08a;
+    color: #333;
+}
+.btn-light{
+    background: #f4f4f4;
+    color: #333;
+}
+.bg-dark{
+    background: #333;
+    color: #fff;
+}
+.bg-light{
+    background: #f4f4f4;
+    color: #333;
+}
+.bg-primary{
+    color: #fff;;
+    background:#f7c08a;
+}
+.clr{
+    clear: both;
+}
+/* padding */
+.py-1{
+    padding: 10px 0;
+}
+.py-2{
+    padding: 20px 0;
+}
+.py-3{
+    padding: 30px 0;
+}
+.l-heading{
+    font-size: 40px;
+}
+/* Цэсний сайтууд */
+#navbar{
+    background-color: #333;
+    color: #fff;
+    position: relative;
+}
+#navbar a{
+    color: #fff;
+}
+#navbar h1{
+    float: left;
+    padding-top: 20px;
+}
+#navbar .initial-menu{
+    list-style: none;
+    float: right;
+}
+#navbar ul{
+    list-style: none;
+}
+#navbar ul li{
+    /* float:left гэж өгсөнөөр li үүд маань цуваад гараад ирнэ */
+    float: left;
+}
+#navbar ul li a{
+    /* display:block болгосноор padding болон margin хийж өгөх боломжтой болж байна гэсэн үг */
+    display: block;
+    padding: 20px;
+    text-align: center;
+}
+#navbar ul li a:hover,
+/* #navbar ul li a.current маань болохоор Эхлэл цэс дээр дарахад  тухайн hover effect маань идэьхитэй байх тохиргоо юм үүний тулд Эхлэл цэс агуулсан a tag дээрээ current  гэсэн class өгчихсөн байгаа */
+#navbar ul li a.current{
+    background-color: #444;
+    color: #f7c08a;
+}
+.small-menu{
+    position: relative;
+    width: 25px;
+    height: 67.2px;
+    float:right ;
+    cursor: pointer;
+    display: none;
+}
+.small-menu i{
+    position: absolute;
+    right: 0;
+    top: 25px;
+    left: 0;
+    cursor: pointer;
+}
+.small-menu i:hover{
+    color: aqua;
+}
+.drop-men{
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 67px;
+    margin: auto;
+    width: 100%;
+    height: 140px;
+    background-color: rgb(64, 64, 64);
+    display: none;
+}
+.drop-men ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100vw;
+}
+.drop-men ul li{
+    padding: 10px 0;
+    transition: all 0.5s;
+    font-size: larger;
+}
+.drop-men ul li:hover{
+    color: aqua;
+}
+#check{
+    display: none;
+}
+@media screen and (max-width:792px) {
+    .initial-menu{
+        display: none;
+    }
+    .small-menu{
+        display: block;
+    }
+    .small-menu:hover ~ .drop-men{
+        display: block;
+    }
+}
+.profile img{
+    text-align: center;
+    width: 60px;
+    object-fit: cover;
+    float: left;
+    margin-top: 3.5px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+/* showcase styles*/
+#showcase{
+    /* url(энд эхлээд нэг цэг тавьвал тухайн folder дотроо гэсэн үг, харин хоёр цэг бол тухайн folder  ийн гадна гэсэн үг) */
+    background: url('../img/maxresdefault.jpg') no-repeat center center/ cover;
+    height: 600px;
+}
+#showcase #showcase-content{
+    color: #fff;
+    text-align: center;
+    padding-top: 170px;
+}
+#showcase #showcase-content h1{
+    font-size: 60px;
+    line-height: 1.2em;
+}
+#showcase #showcase-content p{
+    padding-bottom: 20px;
+    line-height: 1.7em;
+}
+/* мэдээллийн хэсэг */
+#my-info{
+    height: 400px;
+    overflow: hidden;
+}
+#my-info .info-img{
+    float: left;
+    width: 50%;
+    background: url('../img/it\ is\ me.jpg') no-repeat center center/ cover;
+    min-height: 100%;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+#my-info .info-img:hover{
+    transform: scale(1.2);
+}
+#my-info .info-text{
+    float: right;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    padding: 50px 30px;
+    /* scroll bar гаргахгүй гэдэг үүднээс overflow hidden property хийж өгсөн */
+    overflow: hidden;
+}
+#my-info .info-text p{
+    padding-bottom: 30px;
+}
+#features{
+    width: 100%;
+    display: flex;
+}
+#features .box{
+    float: left;
+    width: 33.3%;
+    padding: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+#features .box:hover #ball{
+    animation: test 2s infinite;
+}
+@keyframes test {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+#features .box:hover #books{
+    animation: test1 1s infinite;
+    color: cornflowerblue;
+}
+@keyframes test1 {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+#features .box:hover #coder{
+    animation: test1 1s linear;
+}
+@keyframes test1 {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.4);
+    }
+}
+
+#features .box i{
+    font: normal  30px/1 FontAwesome;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.main-footer{
+    text-align: center;
+    color: #fff;
+    background-color: #444;
+    padding: 20px;
+}
+/* about info */
+#about-info .info-right{
+    float: right;
+    width: 50%;
+    min-height: 100%;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+#about-info .info-right .on-photo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.on-photo .photo-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    margin: auto;
+    width: 70%;
+    display: none;
+    transition: all 1s;
+}
+.on-photo .graduation{
+    width: 40%;
+    height: 50px;
+    color: whitesmoke;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    display: none;
+    transition: all 1s;
+    z-index: 1;
+}
+#about-info .info-right img{
+    text-align: center;
+}
+#about-info .on-photo:hover .photo-back{
+    display: block;
+}
+#about-info .on-photo:hover .graduation{
+    display: block;
+    animation: test3  1s linear;
+}
+@keyframes test3 {
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(50%);
+    }
+    100%{
+        transform: scale(100%);
+    }
+}
+/* зураг нь өөрөө inline элемент учир margin, padding хийж өгөхийн тулд display:block болгоё */
+#about-info .info-right img{
+    width: 70%;
+    display: block;
+    border-radius: 50%;
+    margin: auto;
+}
+#about-info .info-left{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+@media screen and (max-width:970px) {
+    .info-left{
+        width: 100%!important;
+    }
+}
+#about-info .info-left h1{
+    line-height: 40px;
+}
+#about-info .info-left .back{
+    background-color: rgb(205, 202, 202);
+    border-radius: 10px;
+    color:black ;
+    padding: 5px;
+    cursor: pointer;
+}
+#about-info .info-left:hover .back{
+    animation: test2 1s linear;
+}
+@keyframes test2 {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }  
+}
+/* comments */
+#comments{
+    height: 600px;
+    background: url(../img/61584.jpg) no-repeat center center/cover;
+    padding-top: 100px;
+}
+#comments h2{
+    color: #fff;
+    text-align: center;
+    padding-bottom: 40px;
+}
+#comments .comment{
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    /* opacity нь background ийн уусалтыг харуулна */
+    opacity: 0.7;
+    cursor: pointer;
+}
+#comments .comment:hover img{
+    transform: scale(1.4);
+}
+#comments .comment .clor{
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    z-index: 500;
+    height: 100px;
+}
+@media screen and (max-width:1048px) {
+    .clor{
+        overflow-y: scroll;
+    }
+    .sent-height{
+        line-height: 35px;
+    }
+}
+#comments .comment img{
+    width: 120px;
+    height: 120px;
+    float: left;
+    margin-right:20px ;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 1s;
+}
+
+/* contact form */
+#contact-form .form-group{
+    margin-bottom: 20px;
+}
+#contact-form label{
+    /* input  ийг доош буулгая */
+    display: block;
+    margin-bottom: 5px;
+}
+#contact-form input, 
+#contact-form textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+#contact-form textarea{
+    height:200px;
+}
+/* textarea болон input хэсэг дээрээ дарахад улбар шар өнгийн хүрээ гардаг болгое */
+#contact-form input:focus, 
+#contact-form textarea:focus{
+    outline: none;
+    border-color: #f7c08a;
+}
+.social-links{
+    border: 2px solid #f2f2f2;
+    list-style-type: none;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    z-index: 9999;
+    padding: 0;
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.contactl:hover .todroh{
+    color: aqua;
+}
+.con-text{
+    cursor: pointer;
+}
+.con-text p{
+    font-size: 30px;
+}
+.con-text:hover p{
+    color: aqua;
+}
+.main-footer .background{
+    margin: 0;
+}
+.hobby{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    cursor: pointer;
+}
+.hobby .textde{
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.8s;
+}
+.hobby:hover .textde{
+    color: #f7c08a;
+    transform: scale(1.3)
+}
+.hobby i{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 1s;
+}
+.hobby:hover i{
+    transform: translateX(200px);
+    color: #f7c08a;
+}
+.hver{
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.hver:hover{
+    color: rgb(58, 149, 219);
+}
+/* for about */
+@media screen and (max-width:1129px) {
+    .text-height{
+        height: 92px;
+        overflow-y: scroll;
+    }
+    .text-height1{
+        height: 173px;
+        overflow-y: scroll;
+    }
+}
+@media screen and (max-width:970px) {
+    .text-height{
+        overflow-y: hidden!important;
+    }
+    .text-height1{
+        overflow-y: hidden!important;
+    }
+    .phone-type{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width:630px) {
+    .text-height{
+        overflow-y: scroll!important;
+    }
+    .text-height1{
+        overflow-y: scroll!important;
+    }
+}
+@media screen and (max-width:670px) {
+    #comments {
+        min-height: 800px;
+    }
+}
+@media screen and (max-width:624px) {
+    .graduation {
+        font-size: 10px;
+    }
+}
+@media screen  and (max-width:705px) {
+    #comments{
+      min-height: 700px;
+    }
+}
+/* for index.html */
+@media screen and (max-width:690px) {
+    .text-zai{
+        font-size: 30px!important;
+    }
+    .deesh{
+        max-height: 88px;
+    }
+}
+@media screen and (max-width:480px) {
+    .deesh{
+        overflow-y: scroll;
+    }
+}
+@media screen and (max-width:715px) {
+   .text-undur{
+       max-height: 200px;
+       overflow-y: scroll;
+       padding-bottom: 5px!important;
+   }
+}
+@media screen and (max-width:538px) {
+    #my-info{
+        height: 420px;
+    }
+}
+@media screen  and (max-width:703px){
+    #features{
+        flex-direction: column;
+    }
+    #features .box{
+        width: 100vw!important;
+    }
+}
+@media screen and (max-width:418px) {
+    .undur-ug{
+        line-height: 40px;
+    }
+}
